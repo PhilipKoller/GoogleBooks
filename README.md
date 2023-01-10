@@ -2,6 +2,8 @@
 Application that uses Google's Books API 
 
 
+## Technical Requirements
+
 | No. | Description | Test Method |
 |-----|-------------|-------------|
 | 1.0 | The app must use the Google Books API to retrieve search results.| Inspection  |
