@@ -82,12 +82,14 @@ const oldestAndNewest = (arr) => {
 
 
 app.get('/book:title', (req, res) => {
-    // TODO: get req w/ pagination to BOOKSAPI
-
+    const start = performance.now();
     axios.get(`https://www.googleapis.com/books/v1/volumes?q=${req.params.title}&startIndex=0&maxResults=10&key=AIzaSyB-UjS46M1HehmJdul7cNadf3W57zhP-2g`)
         .then((response) => {
+            const end = performance.now();
+            const duration = (end - start).toFixed(2);
             const filtered = filterData(response.data);
-            filtered["responseTime"] = response.config.duration;
+            filtered["responseTime"] = duration;
+           // console.log(filtered.responseTime)
             res.send(filtered);
         })
 

@@ -4,25 +4,26 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 
 
-const BookshelfBody = ({ images }) => {
+const BookshelfBody = ({ books }) => {
     return (
         <ImageList sx={{ width: 700, height: 650 }}>
-            {images.map((imageData) => {
+            {books.map((bookData) => {
                 return <>
-                    <ImageListItem key={imageData._id}>
+                    <ImageListItem key={bookData.title}>
                         <img
-                            src={`data:image/jpeg;base64,${imageBase64}`}
-                            srcSet={`data:image/jpeg;base64,${imageBase64}`}
-                            alt={imageData.name}
-                            loading="lazy"
+                            src={bookData.imageLinks && bookData.imageLinks.thumbnail ? bookData.imageLinks.thumbnail : ''}
+                            alt={bookData.title} loading="lazy"
+                            onClick={() => {
+                                alert('yaho')
+                            }}
                         />
                         <ImageListItemBar
                             title={
-                                imageData.name.length > 20
-                                    ? imageData.name.slice(0, 20) + "..."
-                                    : imageData.name
+                                bookData.title.length > 35
+                                    ? bookData.title.slice(0, 35) + "..."
+                                    : bookData.title
                             }
-                            subtitle={<span>Date Created: {new Date(`${imageData.createdAt}`).toDateString()}</span>}
+                            subtitle={<p>Authors: {bookData.authors ? bookData.authors.join(', ') : 'N/A'}</p>}
                             position="below"
                         />
                     </ImageListItem>
