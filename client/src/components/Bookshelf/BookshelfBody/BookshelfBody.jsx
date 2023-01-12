@@ -4,7 +4,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 
 
-const BookshelfBody = ({ books }) => {
+const BookshelfBody = ({ books, handleBookClick }) => {
     return (
         <ImageList sx={{ width: 700, height: 650 }}>
             {books.map((bookData) => {
@@ -14,7 +14,7 @@ const BookshelfBody = ({ books }) => {
                             src={bookData.imageLinks && bookData.imageLinks.thumbnail ? bookData.imageLinks.thumbnail : ''}
                             alt={bookData.title} loading="lazy"
                             onClick={() => {
-                                alert('yaho')
+                                handleBookClick(bookData)
                             }}
                         />
                         <ImageListItemBar

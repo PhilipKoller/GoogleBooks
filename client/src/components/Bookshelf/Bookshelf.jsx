@@ -7,7 +7,7 @@ import '../../App.css'
 
 const Bookshelf = () => {
     const [books, setBooks] = useState([]);
-    const [clickedImage, setClickedImage] = useState();
+    const [clickedBook, setClickedBook] = useState();
 
     useEffect(() => {
 
@@ -21,6 +21,10 @@ const Bookshelf = () => {
        })
     }
 
+    const handleBookClick = (book) => {
+        setClickedBook(book)
+    }
+
     return (
         <>
             <div className="container">
@@ -29,9 +33,9 @@ const Bookshelf = () => {
                         <BookshelfHeader handleSearch={handleSearch} />
                     </div>
                     <div className="image-body">
-                        <BookshelfBody books={books} />
+                        <BookshelfBody books={books} handleBookClick={handleBookClick} />
                         {
-                            clickedImage ? <DisplayModal setClickedImage={setClickedImage} /> : null
+                            clickedBook ? <DisplayModal setClickedBook={setClickedBook} bookData={clickedBook}/> : null
                         }
                     </div>
                 </div>

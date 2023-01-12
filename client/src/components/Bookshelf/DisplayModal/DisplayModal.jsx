@@ -16,21 +16,20 @@ const style = {
   p: 4,
 };
 
-const BasicModal = ({ setSearchedImage, imageData, handleDelete }) => {
+const BasicModal = ({ setClickedBook, bookData }) => {
   return (
     <div>
       <Modal
         open={true}
-        onClose={() => { setSearchedImage() }}
+        onClose={() => { setClickedBook() }}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} id="modal-box">
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            {imageData.name}
+            {bookData.title} <b/>
           </Typography>
-          <Image imageData={imageData} />
-          <ModalFooter imageData={imageData} handleDelete={handleDelete}/>
+          {bookData.description}
         </Box>
       </Modal>
     </div>
