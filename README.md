@@ -27,6 +27,9 @@ This project is a web application that allows users to search for books using th
 5. Start server    
 ```npm run server-start```  
 
+6. Navigate to
+```http://localhost:[port]```
+
 ## Mockup
 ![Imgur](https://i.imgur.com/ai7rxH9.png)
 ## Server Overview
