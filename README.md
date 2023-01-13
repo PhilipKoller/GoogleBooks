@@ -28,7 +28,7 @@ This project is a web application that allows users to search for books using th
 5. Start server    
 ```npm run server-start```  
 
-6. Navigate to
+6. Navigate to  
 ```http://localhost:YOUR_PORT_NUMBER```
 
 ## Mockup
