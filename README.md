@@ -29,7 +29,7 @@ This project is a web application that allows users to search for books using th
 ```npm run server-start```  
 
 6. Navigate to
-```http://localhost:[YOUR_PORT_NUMBER]```
+```http://localhost:YOUR_PORT_NUMBER```
 
 ## Mockup
 ![Imgur](https://i.imgur.com/ai7rxH9.png)
