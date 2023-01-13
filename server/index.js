@@ -13,14 +13,16 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
 const filterData = (data) => {
     let obj = {
         "totalItems": data.totalItems,
         "items": []
     };
-    data.items.map((book) => {
+    data.items.map((book, index) => {
         book = book.volumeInfo
         obj.items.push({
+            "id": index,
             "title": book.title,
             "authors": book.authors,
             "description": book.description,
@@ -89,7 +91,6 @@ app.get('/book:title', (req, res) => {
             const duration = (end - start).toFixed(2);
             const filtered = filterData(response.data);
             filtered["responseTime"] = duration;
-           // console.log(filtered.responseTime)
             res.send(filtered);
         })
 

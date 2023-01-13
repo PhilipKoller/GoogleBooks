@@ -14,7 +14,7 @@ const Search = ({ handleSearch }) => {
                 placeholder="Search…"
                 inputProps={{ 'aria-label': 'search' }}
                 onKeyPress={(e) => { enterPressed(e) }}
-                className="input-header"
+                className="searchBar"
             />
         </>
 

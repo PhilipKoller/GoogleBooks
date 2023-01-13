@@ -8,8 +8,8 @@ const BookshelfBody = ({ books, handleBookClick }) => {
     return (
         <ImageList sx={{ width: 700, height: 650 }}>
             {books.map((bookData) => {
-                return <>
-                    <ImageListItem key={bookData.title}>
+                return <React.Fragment key={bookData.id}>
+                    <ImageListItem>
                         <img
                             src={bookData.imageLinks && bookData.imageLinks.thumbnail ? bookData.imageLinks.thumbnail : ''}
                             alt={bookData.title} loading="lazy"
@@ -27,7 +27,7 @@ const BookshelfBody = ({ books, handleBookClick }) => {
                             position="below"
                         />
                     </ImageListItem>
-                </>
+                </React.Fragment>
             })}
         </ImageList>
     )
