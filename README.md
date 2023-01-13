@@ -1,6 +1,39 @@
-# GoogleBooks
-Application that uses Google's Books API 
+## Google Books
 
+This project is a web application that allows users to search for books using the Google Books API.
+
+
+### Prerequisites
+
+- A computer with an internet connection and a web browser
+- A code editor or integrated development environment (IDE)
+- [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) (Node Package Manager) installed on your computer
+- Google Books API Key
+
+## Setup
+
+1. Clone the repository  
+```git clone https://github.com/PhilipKoller/GoogleBooks.git```  
+
+1. Install dependencies  
+```npm install```
+
+3. Create a .env file in the root directory of the project and add your Google Books API Key  
+```API_KEY=YOUR_API_KEY```
+
+4. Build Webpack   
+```npm run build```  
+
+5. Start server    
+```npm run server-start```  
+
+6. Navigate to
+```http://localhost:[port]```
+
+## Mockup
+![Imgur](https://i.imgur.com/ai7rxH9.png)
+## Server Overview
+![Imgur](https://i.imgur.com/y1csWzI.png)
 
 ## Technical Requirements
 
