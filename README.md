@@ -18,8 +18,9 @@ This project is a web application that allows users to search for books using th
 1. Install dependencies  
 ```npm install```
 
-3. Create a .env file in the root directory of the project and add your Google Books API Key  
-```API_KEY=YOUR_API_KEY```
+3. Create a .env file in the root directory of the project and add your Google Books API Key and Port Number
+```API_KEY=YOUR_API_KEY```  
+```PORT=YOUR_PORT_NUMBER```
 
 4. Build Webpack   
 ```npm run build```  
@@ -28,7 +29,7 @@ This project is a web application that allows users to search for books using th
 ```npm run server-start```  
 
 6. Navigate to
-```http://localhost:[port]```
+```http://localhost:YOUR_PORT_NUMBER```
 
 ## Mockup
 ![Imgur](https://i.imgur.com/ai7rxH9.png)
