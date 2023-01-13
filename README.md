@@ -2,9 +2,12 @@
 
 This project is a web application that allows users to search for books using the Google Books API.
 
-## Requirements
 
-- Node.js
+### Prerequisites
+
+- A computer with an internet connection and a web browser
+- A code editor or integrated development environment (IDE)
+- [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) (Node Package Manager) installed on your computer
 - Google Books API Key
 
 ## Setup
