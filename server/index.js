@@ -1,10 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-<<<<<<< HEAD
-const moment = require('moment');
-=======
 const moment = require('moment')
->>>>>>> 6f2063496073bc626f7a9e038c7bef35b2d8f0ee
 const { performance } = require("perf_hooks");
 require('dotenv').config();
 
@@ -101,7 +97,6 @@ app.get('/book:title', (req, res) => {
         .catch((err) => {
             res.status(500).send('An Error occurred: ', err)
         })
-
 });
 
 
