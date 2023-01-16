@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const moment = require('moment')
+const moment = require('moment');
+const { performance } = require("perf_hooks");
 require('dotenv').config();
 
 const app = express();
@@ -92,6 +93,9 @@ app.get('/book:title', (req, res) => {
             const filtered = filterData(response.data);
             filtered["responseTime"] = duration;
             res.send(filtered);
+        })
+        .catch((err) => {
+            res.status(500).send('An Error occurred: ', err)
         })
 
 });
