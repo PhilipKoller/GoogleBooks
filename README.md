@@ -35,6 +35,7 @@ This project is a web application that allows users to search for books using th
 Type the name of the book in the search bar.  
 Press the enter key to see results.  
 Click any book to see a description. 
+
 ![2023-01-15 22-34-58](https://user-images.githubusercontent.com/68295732/212600438-000a53ff-67d9-4244-8b8e-ff83cbe85b4a.gif)
 ## Mockup
 ![Imgur](https://i.imgur.com/ai7rxH9.png)
